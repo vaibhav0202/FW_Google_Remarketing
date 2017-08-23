@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <FW_Google_Remarketing>
+            <version>1.0.0</version>
+        </FW_Google_Remarketing>
+    </modules>
+    <global>
+        <models>
+            <fw_google_remarketing>
+                <class>FW_Google_Remarketing_Model</class>
+            </fw_google_remarketing>
+        </models>
+        <helpers>
+            <fw_google_remarketing>
+                <class>FW_Google_Remarketing_Helper</class>
+            </fw_google_remarketing>
+        </helpers>
+        <events>
+            <controller_action_layout_generate_blocks_after>
+                <observers>
+                    <fw_google_remarketing>
+                        <class>FW_Google_Remarketing_Model_Observer</class>
+                        <method>generateRemarketingJs</method>
+                    </fw_google_remarketing>
+                </observers>
+            </controller_action_layout_generate_blocks_after>
+        </events>
+    </global>
+</config>
